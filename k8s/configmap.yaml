@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: node-sap-sample
+  labels:
+    app: node-sap-sample
+data:
+  host: https://api.c-770f972.kyma.ondemand.com
+  port: "443"

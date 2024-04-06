@@ -1,0 +1,22 @@
+apiVersion: gateway.kyma-project.io/v1beta1
+kind: APIRule
+metadata:
+  name: node-sap-sample
+spec: 
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  host: node-sap-sample
+  service:
+    name: node-sap-sample
+    port: 3001
+  rules: 
+    - accessStrategies: 
+      - config: {}
+        handler: noop
+      methods: 
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+      - HEAD
+      path: /.*
