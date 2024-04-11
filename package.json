@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "name": "sap-sample",
+  "version": "1.0.0",
+  "main": "app.server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app/server.js",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

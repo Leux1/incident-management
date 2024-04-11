@@ -3,7 +3,7 @@ FROM node:20
 WORKDIR /usr/src/app
 
 #Install app dependencies
-COPY app/package*.json ./
+COPY package.json ./
 RUN npm install
 
 #Bundle app source folder
