@@ -35,5 +35,4 @@ steps:
       containerImageTag: "latest"
       buildpacks:
       - "gcr.io/paketo-buildpacks/nodejs"
-      path: "source/nodejs"
 
