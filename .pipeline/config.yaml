@@ -21,9 +21,8 @@ steps:
     runScripts:
     - "test"
   buildExecute:
-    npmInstall: false
+    npmInstall: true
     npmRunScripts:
-    - "npm install"
     - "npm run start"
     cnbBuild: true
     helmExecute: false
