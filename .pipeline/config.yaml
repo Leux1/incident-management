@@ -33,4 +33,3 @@ steps:
     - containerImageAlias: "leux1/node-sap-sample"
       containerImageName: "leux1/node-sap-sample"
       containerImageTag: "latest"
-      path: "/usr/src/app"
