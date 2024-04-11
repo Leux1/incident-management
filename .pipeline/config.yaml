@@ -33,3 +33,7 @@ steps:
     - containerImageAlias: "leux1/node-sap-sample"
       containerImageName: "leux1/node-sap-sample"
       containerImageTag: "latest"
+      buildpacks:
+      - "gcr.io/paketo-buildpacks/nodejs"
+      path: "source/nodejs"
+
