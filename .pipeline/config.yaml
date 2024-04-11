@@ -1,0 +1,37 @@
+---
+general:
+  buildTool: "npm"
+  chartPath: "chart"
+service:
+  buildToolVersion: "N20"
+stages:
+  Build:
+    npmExecuteLint: false
+  Additional Unit Tests:
+    npmExecuteScripts: false
+  Release:
+    kubernetesDeploy: true
+    deploymentName: "incident-management"
+    kubeConfigFileCredentialsId: "kube-config"
+    namespace: "dev"
+steps:
+  npmExecuteLint:
+    failOnError: false
+  npmExecuteScripts:
+    runScripts:
+    - "test"
+  buildExecute:
+    npmInstall: false
+    npmRunScripts:
+    - "npm install"
+    - "npm run start"
+    cnbBuild: true
+    helmExecute: false
+  cnbBuild:
+    containerRegistryUrl: "https://index.docker.io"
+    dockerConfigJsonCredentialsId: "container-registry-credentials"
+    multipleImages:
+    - containerImageAlias: "leux1/node-sap-sample"
+      containerImageName: "leux1/node-sap-sample"
+      containerImageTag: "latest"
+      path: "/usr/src/app"
